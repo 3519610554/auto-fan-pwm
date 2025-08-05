@@ -1,0 +1,12 @@
+[Unit]
+Description=Fan PWM Auto Control Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/fan_pwm_control.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
